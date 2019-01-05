@@ -97,7 +97,6 @@ eggnog DPRK & North Korean hacking festivities.
 * MediaTek for building backdoors - [MTK flasher](https://spflashtool.com)
 * redstar-tools team for watermarking research - [redstar-tools](https://github.com/takeshixx/redstar-tools)
 * DefCon562 for hacking fiends - [dc562](https://dc562.org/)
-
-ISO slim shady ~ slipstream
+* slipstream - RSS
 
 ![DPRK ROM](https://raw.githubusercontent.com/hackerhouse-opensource/pyongyang_2407/master/booted.png)
