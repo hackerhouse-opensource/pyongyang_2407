@@ -100,4 +100,4 @@ eggnog DPRK & North Korean hacking festivities.
 
 ISO slim shady ~ slipstream
 
-![DPRK ROM](https://github.com/hackerhouse-opensource/pyongyang_2407/booted.png)
+![DPRK ROM](https://raw.githubusercontent.com/hackerhouse-opensource/pyongyang_2407/master/booted.png)
