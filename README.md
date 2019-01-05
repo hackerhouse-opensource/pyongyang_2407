@@ -38,8 +38,8 @@ First flash the included WBW5511GI_0202_T5752 over the WBW5511_MAINBOARD_P2 base
 this will provide you with a Android JellyBean 4.2.2 ROM. It doesnt matter which vendor
 providing it is WBW5511_MAINBOARD_P2, easy to tell with the battery and cover removed.
 
-WARNING THIS WILL COMPLETELY OVERWRITE YOUR FLASH CHIP USING EARLY PRELOADER ON DEVICE
-AND IT IS ENTIRELY POSSIBLE TO BRICK INCOMPATIBLE HARDWARE.
+**WARNING THIS WILL COMPLETELY OVERWRITE YOUR FLASH CHIP USING EARLY PRELOADER ON DEVICE
+AND IT IS ENTIRELY POSSIBLE TO BRICK INCOMPATIBLE HARDWARE.**
 
 1) load included jellybean (WBW5511GI_0202_T5752) based rom onto device, using SPFlashTool
 2) Boot device, it will take a few minutes
