@@ -100,3 +100,4 @@ eggnog DPRK & North Korean hacking festivities.
 * slipstream - RSS
 
 ![DPRK ROM](https://raw.githubusercontent.com/hackerhouse-opensource/pyongyang_2407/master/booted.png)
+*Boot your own Android JellyBean North Korean ROM*
