@@ -90,16 +90,14 @@ features to assist hacking and exploration of the ROM contents.
 
 # Acknowledgements
 Hacker Fantastic would like to thank the following people for taking part in the annual winter
-eggnog DPRK festivities.
+eggnog DPRK & North Korean hacking festivities.
 
-Thanks to Will & team behind [KCC](http://www.koreacomputercenter.org)
-
-Hacker House for supporting open-source security research - [Hacker House](https://hacker.house)
-
-MediaTek for building backdoors - [MTK flasher](https://spflashtool.com)
-
-redstar-tools team for watermarking research - [redstar-tools](https://github.com/takeshixx/redstar-tools)
-
-DefCon562 for hacking fiends - [dc562](https://dc562.org/)
+* Thanks to Will & team behind [KCC](http://www.koreacomputercenter.org)
+* Hacker House for supporting open-source security research - [Hacker House](https://hacker.house)
+* MediaTek for building backdoors - [MTK flasher](https://spflashtool.com)
+* redstar-tools team for watermarking research - [redstar-tools](https://github.com/takeshixx/redstar-tools)
+* DefCon562 for hacking fiends - [dc562](https://dc562.org/)
 
 ISO slim shady ~ slipstream
+
+![DPRK ROM](https://github.com/hackerhouse-opensource/pyongyang_2407/booted.png)
