@@ -10,16 +10,17 @@ This repository contains instructions on how to boot and load Pyongyang 2407 ROM
 "Pyongyang 2407 Cellphone disk image" onto a device. All needed tools are included in
 [pyongyang_2407.tgz](https://github.com/hackerhouse-opensource/pyongyang_2407/releases/download/1.0/pyongyang_2407.tgz) and future updates can be downloaded from [releases](https://github.com/hackerhouse-opensource/pyongyang_2407/releases/tag/1.0)
 
-You need a device with a WBW5511_MAINBOARD_P2 device for this ROM to work. These are
+You need a WBW5511_MAINBOARD_P2 hardware device for this ROM to work. These are
 MTK6258 based cellphone devices - sold under a variety of different brand names.
 
 * Walton Pro H3
 * Gionee CTRL V5
-* BLU Life Play 2
+* BLU Life Play 2 (YHLBLULIFEPLAY2) [FCCID](https://fccid.io/YHLBLULIFEPLAY2)
 
 Originally mass-marketted to India, Egypt etc. from China - spread to USA as BLU export.
 You may find other devices matching specs above with the same board internals. Specification,
 internals will be a match, outer casing can be re-branded or coloured.
+
 
 ## Host Setup
 Note you will need a native host as the boot process exploited with MTK tools requires a
