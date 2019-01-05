@@ -1,4 +1,4 @@
-# 평양 2407 Android ROM
+# 평양 (Pyongyang) 2407 Android ROM
 
 평양 2407 is an aftermarket Android ROM used in North Korea compatible with Chinese
 hardware. 평양 2407 or Pyongyang 2407 can be booted on similar Chinese hardware
@@ -28,7 +28,7 @@ own peril. From Linux we are going to use MTK download agent to re-flash a modif
 the KCC overlay files. When using a Linux system prevent ModemManager interfering with the
 preloader ttyACM0 device you must stop all processess accessing it. e.g.
 
-"sudo systemctl stop ModemManager"
+_"sudo systemctl stop ModemManager"_
 
 You should then run flash tool (spflashtool) - SP Flash Tool is an application to flash
 your MediaTek (MTK) SmartPhone.  You can find binaries for it here https://spflashtool.com/
@@ -44,9 +44,9 @@ AND IT IS ENTIRELY POSSIBLE TO BRICK INCOMPATIBLE HARDWARE.**
 1) load included jellybean (WBW5511GI_0202_T5752) based rom onto device, using SPFlashTool
 2) Boot device, it will take a few minutes
 3) root device - kingroot APK (works)
-4) put "data.ext4" and "system.tar" onto /sdcard via "adb push"
-5) upload "gnutar" and "busybox-android" from this repo
-6) "adb shell" and check "su" works
+4) put *data.ext4* and *system.tar* onto /sdcard via _"adb push"_
+5) upload _"gnutar"_ and _"busybox-android"_ from this repo
+6) _"adb shell"_ and check _"su"_ works
 
 ## Install ROM 평양 files
 I made some modifications to the KCC files to work with the supplied ROM. For instance I
@@ -102,5 +102,4 @@ redstar-tools team for watermarking research - [redstar-tools](https://github.co
 
 DefCon562 for hacking fiends - [dc562](https://dc562.org/)
 
-slim shady ~ slipstream 
-
+ISO slim shady ~ slipstream
