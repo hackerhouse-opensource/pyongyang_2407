@@ -1,5 +1,4 @@
-평양 2407 Android ROM
-=====================
+# 평양 2407 Android ROM
 
 평양 2407 is an aftermarket Android ROM used in North Korea compatible with Chinese
 hardware. 평양 2407 or Pyongyang 2407 can be booted on similar Chinese hardware
@@ -22,8 +21,7 @@ Originally mass-marketted to India, Egypt etc. from China - spread to USA as BLU
 You may find other devices matching specs above with the same board internals. Specification,
 internals will be a match, outer casing can be re-branded or coloured.
 
-Host Setup
-==========
+## Host Setup
 Note you will need a native host as the boot process exploited with MTK tools requires a
 native USB interface only accessible for a few seconds. Do not use a virtual machine at your
 own peril. From Linux we are going to use MTK download agent to re-flash a modified ROM with
@@ -35,8 +33,7 @@ preloader ttyACM0 device you must stop all processess accessing it. e.g.
 You should then run flash tool (spflashtool) - SP Flash Tool is an application to flash
 your MediaTek (MTK) SmartPhone.  You can find binaries for it here https://spflashtool.com/
 
-First Boot ROM
-===============
+## First Boot ROM
 First flash the included WBW5511GI_0202_T5752 over the WBW5511_MAINBOARD_P2 based device,
 this will provide you with a Android JellyBean 4.2.2 ROM. It doesnt matter which vendor
 providing it is WBW5511_MAINBOARD_P2, easy to tell with the battery and cover removed.
@@ -51,8 +48,7 @@ AND IT IS ENTIRELY POSSIBLE TO BRICK INCOMPATIBLE HARDWARE.
 5) upload "gnutar" and "busybox-android" from this repo
 6) "adb shell" and check "su" works
 
-Install ROM 평양 files
-======================
+## Install ROM 평양 files
 I made some modifications to the KCC files to work with the supplied ROM. For instance I
 have replaced missing kernel modules in "/usr/lib/modules" and created a compatible layout
 file with a new kernel image and clean boot loaders. you still need to manually overwrite
@@ -82,8 +78,7 @@ keep only the Android user space modifications.
 
 Happy hacking! Enjoy your 평양 2407 phone!
 
-DPRK Surveillance
-=================
+## DPRK Surveillance
 An accompanying presentation on device internals and DPRK Android hacking released at DC562 January
 2019. DPRK & Android surveillance components including "libLegalInterface.so" are explored in more
 depth during presentation. The surveillance technology matches what was already seen in DPRK Red
@@ -93,14 +88,13 @@ a device, the logger will crash as unique device identifiers are missing. It is 
 the flashing / recovery img to wipe data on a Pyongyang device unless modified. We enabled some
 features to assist hacking and exploration of the ROM contents.
 
-Acknowledgements
-================
+# Acknowledgements
 Hacker Fantastic would like to thank the following people for taking part in the annual winter
 eggnog DPRK festivities.
 
-Thanks to Will & team behind http://www.koreacomputercenter.org
-Hacker House for supporting open-source security research - https://hacker.house
-MediaTek for building backdoors - https://spflashtool.com
-redstar-tools team for watermarking research - https://github.com/takeshixx/redstar-tools
-DefCon562 for hacking fiends - https://dc562.org/
+Thanks to Will & team behind [KCC](http://www.koreacomputercenter.org)
+Hacker House for supporting open-source security research - [Hacker House](https://hacker.house)
+MediaTek for building backdoors - [MTK flasher](https://spflashtool.com)
+redstar-tools team for watermarking research - [redstar-tools](https://github.com/takeshixx/redstar-tools)
+DefCon562 for hacking fiends - [dc562](https://dc562.org/)
 slim shady ~ slipstream 
