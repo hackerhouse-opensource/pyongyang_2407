@@ -13,7 +13,7 @@ This repository contains instructions on how to boot and load Pyongyang 2407 ROM
 [pyongyang_2407.tgz](https://github.com/hackerhouse-opensource/pyongyang_2407/releases/download/1.3/pyongyang_2407.tgz) and future updates to safe reverse engineered efforts can be downloaded from [releases](https://github.com/hackerhouse-opensource/pyongyang_2407/releases/tag/1.3)
 
 You need a WBW5511_MAINBOARD_P2 hardware device for this ROM to work. These are
-MTK6258 based cellphone devices - sold under a variety of different brand names. If
+MTK6582 based cellphone devices - sold under a variety of different brand names. If
 you want to see details of the board, check out the FCCID link.
 
 * Walton Pro H3
