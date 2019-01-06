@@ -1,5 +1,7 @@
 # 평양 (Pyongyang) 2407 Android ROM
 
+![Pyongyang](https://github.com/hackerhouse-opensource/pyongyang_2407/raw/master/screenshot.png)
+
 평양 2407 is an aftermarket Android ROM used in North Korea compatible with Chinese
 hardware. 평양 2407 or Pyongyang 2407 can be booted on similar Chinese hardware
 available in countries such as India, China, Egypt & USA. 평양 2407 provides limited
