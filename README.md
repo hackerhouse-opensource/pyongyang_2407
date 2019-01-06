@@ -42,7 +42,7 @@ First flash the included WBW5511GI_0202_T5752 over the WBW5511_MAINBOARD_P2 base
 this will provide you with a Android JellyBean 4.2.2 ROM. It doesnt matter which vendor
 providing it is WBW5511_MAINBOARD_P2, easy to tell with the battery and cover removed.
 
-![WBW511] 
+![WBW511](https://raw.githubusercontent.com/hackerhouse-opensource/pyongyang_2407/master/WBW5511.png)
 
 **WARNING THIS WILL COMPLETELY OVERWRITE YOUR FLASH CHIP USING EARLY PRELOADER ON DEVICE
 AND IT IS ENTIRELY POSSIBLE TO BRICK INCOMPATIBLE HARDWARE.**
