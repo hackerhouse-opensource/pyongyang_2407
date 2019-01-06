@@ -10,7 +10,7 @@ operating system that conducts surveillance and tracking on the user.
 
 This repository contains instructions on how to boot and load Pyongyang 2407 ROM from
 "Pyongyang 2407 Cellphone disk image" onto a device. All needed tools are included in
-[pyongyang_2407.tgz](https://github.com/hackerhouse-opensource/pyongyang_2407/releases/download/1.0/pyongyang_2407.tgz) and future updates can be downloaded from [releases](https://github.com/hackerhouse-opensource/pyongyang_2407/releases/tag/1.0)
+[pyongyang_2407.tgz](https://github.com/hackerhouse-opensource/pyongyang_2407/releases/download/1.0/pyongyang_2407.tgz) and future updates to safe reverse engineered efforts can be downloaded from [releases](https://github.com/hackerhouse-opensource/pyongyang_2407/releases/tag/1.0)
 
 You need a WBW5511_MAINBOARD_P2 hardware device for this ROM to work. These are
 MTK6258 based cellphone devices - sold under a variety of different brand names. If
