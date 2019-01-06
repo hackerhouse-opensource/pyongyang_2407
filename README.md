@@ -52,13 +52,14 @@ device without battery. It contains a simple download & boot from RAM backdoor t
 you run any .bin code to read/write/format the EMMC / NAND and SDMMC (which MT6582 boots 
 from). It is provided by the "preloader" function.
 
-[136466.320357] usb 1-5: new high-speed USB device number 48 using xhci_hcd
+```[136466.320357] usb 1-5: new high-speed USB device number 48 using xhci_hcd
 [136466.462845] usb 1-5: New USB device found, idVendor=0e8d, idProduct=2000, bcdDevice= 1.00
 [136466.462853] usb 1-5: New USB device strings: Mfr=1, Product=2, SerialNumber=0
 [136466.462858] usb 1-5: Product: MT65xx Preloader
 [136466.462862] usb 1-5: Manufacturer: MediaTek
 [136466.526864] cdc_acm 1-5:1.1: ttyACM0: USB ACM device
 [136468.181907] usb 1-5: USB disconnect, device number 48 
+```
 
 If you can see something similar to above in dmesg output and no ModemManager is running
 you can proceed.
