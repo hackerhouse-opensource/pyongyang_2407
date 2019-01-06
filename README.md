@@ -10,7 +10,7 @@ operating system that conducts surveillance and tracking on the user.
 
 This repository contains instructions on how to boot and load Pyongyang 2407 ROM from
 "Pyongyang 2407 Cellphone disk image" onto a device. All needed tools are included in
-[pyongyang_2407.tgz](https://github.com/hackerhouse-opensource/pyongyang_2407/releases/download/1.0/pyongyang_2407.tgz) and future updates to safe reverse engineered efforts can be downloaded from [releases](https://github.com/hackerhouse-opensource/pyongyang_2407/releases/tag/1.0)
+[pyongyang_2407.tgz](https://github.com/hackerhouse-opensource/pyongyang_2407/releases/download/1.2/pyongyang_2407.tgz) and future updates to safe reverse engineered efforts can be downloaded from [releases](https://github.com/hackerhouse-opensource/pyongyang_2407/releases/tag/1.2)
 
 You need a WBW5511_MAINBOARD_P2 hardware device for this ROM to work. These are
 MTK6258 based cellphone devices - sold under a variety of different brand names. If
@@ -41,6 +41,8 @@ your MediaTek (MTK) SmartPhone.  You can find binaries for it here https://spfla
 First flash the included WBW5511GI_0202_T5752 over the WBW5511_MAINBOARD_P2 based device,
 this will provide you with a Android JellyBean 4.2.2 ROM. It doesnt matter which vendor
 providing it is WBW5511_MAINBOARD_P2, easy to tell with the battery and cover removed.
+
+![WBW511] 
 
 **WARNING THIS WILL COMPLETELY OVERWRITE YOUR FLASH CHIP USING EARLY PRELOADER ON DEVICE
 AND IT IS ENTIRELY POSSIBLE TO BRICK INCOMPATIBLE HARDWARE.**
