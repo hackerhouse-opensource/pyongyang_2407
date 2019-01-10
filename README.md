@@ -114,11 +114,14 @@ features to assist hacking and exploration of the ROM contents.
 
 ## DPRK Android jailbreak
 
-experimental exploit can be applied to the phone to allow loading of any media. 
+experimental exploit can be applied to the phone to allow loading of any media & bypass state
+censorship tools. 
 
 ``` $ adb push libmedianatsign.so /sdcard
 libmedianatsign.so: 1 file pushed. 1.0 MB/s (26244 bytes in 0.025s)
 ```
+
+You need to use "su" and from root just replace libmedianatsign.so
 
 ```
 shell@평양:/ # mount -o rw,remount /system
@@ -126,7 +129,7 @@ shell@평양:/ # cp /sdcard/libmedianatsign.so /system/lib
 ```
 
 Any media file played on the device will now be treated as a "Nat_Sign_File" and not be
-recorded in the events tracer.
+recorded in the events tracer. 
  
 ``` D/gov_sign( 1812): MnsNative isNatSignFile : file name = /storage/sdcard0/Video/The.Interview.2014.720p.BluRay.x264.YIFY.mp4, result = 1570963136
 D/RSG     ( 1812): This file is Nat_Sign_File.
