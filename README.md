@@ -52,7 +52,8 @@ device without battery. It contains a simple download & boot from RAM backdoor t
 you run any .bin code to read/write/format the EMMC / NAND and SDMMC (which MT6582 boots 
 from). It is provided by the "preloader" function.
 
-```[136466.320357] usb 1-5: new high-speed USB device number 48 using xhci_hcd
+```
+[136466.320357] usb 1-5: new high-speed USB device number 48 using xhci_hcd
 [136466.462845] usb 1-5: New USB device found, idVendor=0e8d, idProduct=2000, bcdDevice= 1.00
 [136466.462853] usb 1-5: New USB device strings: Mfr=1, Product=2, SerialNumber=0
 [136466.462858] usb 1-5: Product: MT65xx Preloader
@@ -117,7 +118,8 @@ features to assist hacking and exploration of the ROM contents.
 experimental exploit can be applied to the phone to allow loading of any media & bypass state
 censorship tools. 
 
-``` $ adb push libmedianatsign.so /sdcard
+``` 
+$ adb push libmedianatsign.so /sdcard
 libmedianatsign.so: 1 file pushed. 1.0 MB/s (26244 bytes in 0.025s)
 ```
 
@@ -131,7 +133,8 @@ shell@평양:/ # cp /sdcard/libmedianatsign.so /system/lib
 Any media file played on the device will now be treated as a "Nat_Sign_File" and not be
 recorded in the events tracer. 
  
-``` D/gov_sign( 1812): MnsNative isNatSignFile : file name = /storage/sdcard0/Video/The.Interview.2014.720p.BluRay.x264.YIFY.mp4, result = 1570963136
+``` 
+D/gov_sign( 1812): MnsNative isNatSignFile : file name = /storage/sdcard0/Video/The.Interview.2014.720p.BluRay.x264.YIFY.mp4, result = 1570963136
 D/RSG     ( 1812): This file is Nat_Sign_File.
 ```
 
