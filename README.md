@@ -138,6 +138,101 @@ D/gov_sign( 1724): MnsNative isNatSignFile : file name = /storage/sdcard0/Video/
 D/RSG     ( 1724): This file is Nat_Sign_File.
 ```
 
+This is a good example of why governments should not have "Golden Keys", the DPRK Android ROM
+can be abused through its trust model of state access. A user can abuse the functionalities in
+this case to escape the security enforcements.
+
+## DPRK gov_sign exploit (bypass media checks) libmedianatsign.so
+
+This is the high level pseudo-code called when isNatSignFile is passed inside Android OS,
+this happens whenever a file is being checked for a valid certificate on opening, accessing,
+reading directories etc. the result this function determines which checks are to be called
+and also performs the verification of certificate to identify NATSIGN and SELFSIGN keyword.
+
+int isNatSignFile(int arg0, int arg1, int arg2) {
+    r3 = *(*arg0 + (0xa9 << 0x2));
+    r0 = (r3)(arg0, arg2 + 0x0, 0x0, r3);
+    r4 = verifyFileSign(r0, arg2 + 0x0, 0x0, r3, var_18, stack[-20], stack[-16]) + 0x0;
+    __android_log_print();
+    r0 = r4 + 0x0;
+    return r0;
+}
+
+The original ARMv7 ASM for this function is below.
+
+```
+        ; ================ B E G I N N I N G   O F   P R O C E D U R E ================
+
+        ; Variables:
+        ;    var_18: int32_t, -24
+
+
+             isNatSignFile:
+00001978         push       {r4, r5, lr}
+0000197a         ldr        r1, [r0]
+0000197c         movs       r3, #0xa9
+0000197e         lsls       r3, r3, #0x2
+00001980         sub        sp, #0xc
+00001982         ldr        r3, [r1, r3]
+00001984         adds       r1, r2, #0x0
+00001986         movs       r2, #0x0
+00001988         blx        r3
+0000198a         adds       r5, r0, #0x0
+0000198c         bl         verifyFileSign                                      ; verifyFileSign
+00001990         ldr        r1, =0x3e52                                         ; dword_19ac,0x3e52
+00001992         ldr        r2, =0x3e9c                                         ; dword_19b0,0x3e9c
+00001994         adds       r4, r0, #0x0
+00001996         str        r0, [sp, #0x18 + var_18]
+00001998         adds       r3, r5, #0x0
+0000199a         add        r1, pc                                              ; "gov_sign"
+0000199c         add        r2, pc                                              ; "MnsNative isNatSignFile : file name = %s, result = %d"
+0000199e         movs       r0, #0x3
+000019a0         blx        __android_log_print@PLT                             ; __android_log_print
+000019a4         add        sp, #0xc
+000019a6         adds       r0, r4, #0x0
+000019a8         pop        {r4, r5, pc}
+                        ; endp
+```
+
+It is possible to hijack this function and subvert the logic, by rewriting this function in ASM it
+will treat all opened files as "NATSIGN" files with successful state authorisation for use, no logging
+will be performed or any further checks on the file. By patching this function we can now use the phone
+to open any media files and documents without "this files is not legal." errors.
+
+```
+        ; ================ B E G I N N I N G   O F   P R O C E D U R E ================
+
+        ; Variables:
+        ;    var_18: int32_t, -24
+
+
+             isNatSignFile:
+00001978         push       {r4, r5, lr}
+0000197a         ldr        r1, [r0]
+0000197c         movs       r3, #0xa9
+0000197e         lsls       r3, r3, #0x2
+00001980         sub        sp, #0xc
+00001982         ldr        r3, [r1, r3]
+00001984         adds       r1, r2, #0x0
+00001986         movs       r2, #0x0
+00001988         blx        r3
+0000198a         adds       r5, r0, #0x0
+0000198c         movs       r0, #0x1   ; my milkshake brings a 0x1 into r0.
+0000198e         nop                   ; nop out the actual verify checks entirely
+00001990         ldr        r1, =0x3e52                                         ; dword_19ac,0x3e52
+00001992         ldr        r2, =0x3e9c                                         ; dword_19b0,0x3e9c
+00001994         movs       r4, #0x1
+00001996         str        r0, [sp, #0x18 + var_18] ; store false "1" result, gov_sign result = 1
+00001998         adds       r3, r5, #0x0
+0000199a         add        r1, pc                                              ; "gov_sign"
+0000199c         add        r2, pc                                              ; "MnsNative isNatSignFile : file name = %s, result = %d"
+0000199e         movs       r0, #0x3
+000019a0         blx        __android_log_print@PLT                             ; __android_log_print
+000019a4         add        sp, #0xc
+000019a6         movs       r0, #0x1  ; make function return 1
+000019a8         pop        {r4, r5, pc}
+                        ; endp
+```
 
 # Acknowledgements
 Hacker Fantastic would like to thank the following people for taking part in the annual winter
