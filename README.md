@@ -149,6 +149,7 @@ this happens whenever a file is being checked for a valid certificate on opening
 reading directories etc. the result this function determines which checks are to be called
 and also performs the verification of certificate to identify NATSIGN and SELFSIGN keyword.
 
+```
 int isNatSignFile(int arg0, int arg1, int arg2) {
     r3 = *(*arg0 + (0xa9 << 0x2));
     r0 = (r3)(arg0, arg2 + 0x0, 0x0, r3);
@@ -157,6 +158,7 @@ int isNatSignFile(int arg0, int arg1, int arg2) {
     r0 = r4 + 0x0;
     return r0;
 }
+```
 
 The original ARMv7 ASM for this function is below.
 
