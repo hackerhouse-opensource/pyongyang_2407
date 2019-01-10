@@ -134,8 +134,8 @@ Any media file played on the device will now be treated as a "Nat_Sign_File" and
 recorded in the events tracer. 
  
 ``` 
-D/gov_sign( 1812): MnsNative isNatSignFile : file name = /storage/sdcard0/Video/The.Interview.2014.720p.BluRay.x264.YIFY.mp4, result = 1570963136
-D/RSG     ( 1812): This file is Nat_Sign_File.
+D/gov_sign( 1724): MnsNative isNatSignFile : file name = /storage/sdcard0/Video/The.Interview.2014.720p.BluRay.x264.YIFY.mp4, result = 1
+D/RSG     ( 1724): This file is Nat_Sign_File.
 ```
 
 
