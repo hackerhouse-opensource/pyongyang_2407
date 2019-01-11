@@ -102,7 +102,8 @@ keep only the Android user space modifications.
 
 Happy hacking! Enjoy your 평양 2407 phone!
 
-## DPRK Surveillance
+## DPRK Surveillance (전자서명조작체계) RedFlag
+
 An accompanying presentation on device internals and DPRK Android hacking released at DC562 January
 2019. DPRK & Android surveillance components including "libLegalInterface.so" are explored in more
 depth during presentation. The surveillance technology matches what was already seen in DPRK Red
