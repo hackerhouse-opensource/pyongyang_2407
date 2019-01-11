@@ -142,12 +142,12 @@ This is a good example of why governments should not have "Golden Keys", the DPR
 can be abused through its trust model of state access. A user can abuse the functionalities in
 this case to escape the security enforcements.
 
-## DPRK gov_sign exploit (bypass media checks) libmedianatsign.so
+## 전자서명조작체계 gov_sign exploit (bypass signed media checks) libmedianatsign.so
 
 This is the high level pseudo-code called when isNatSignFile is passed inside Android OS,
 this happens whenever a file is being checked for a valid certificate on opening, accessing,
 reading directories etc. the result this function determines which checks are to be called
-and also performs the verification of certificate to identify NATISIGN and SELFSIGN keyword.
+and also performs the verification of certificate to identify NATSIGN and SELFSIGN keyword.
 
 ```
 int isNatSignFile(int arg0, int arg1, int arg2) {
@@ -197,9 +197,10 @@ The original ARMv7 ASM for this function is below.
 ```
 
 It is possible to hijack this function and subvert the logic, by rewriting this function in ASM it
-will treat all opened files as "NATISIGN" files with successful state authorisation for use, no logging
+will treat all opened files as "NATSIGN" files with successful state authorisation for use, no logging
 will be performed or any further checks on the file. By patching this function we can now use the phone
-to open any media files and documents without "this files is not legal." errors.
+to open any media files and documents without "this file is not legal." errors and will not record use
+of the file or offending applications using the file in 전자서명조작체계.
 
 ```
         ; ================ B E G I N N I N G   O F   P R O C E D U R E ================
