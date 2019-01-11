@@ -104,20 +104,17 @@ Happy hacking! Enjoy your 평양 2407 phone!
 
 ## DPRK Surveillance (전자서명조작체계) RedFlag
 
-An accompanying presentation on device internals and DPRK Android hacking released at DC562 January
-2019. DPRK & Android surveillance components including "libLegalInterface.so" are explored in more
-depth during presentation. The surveillance technology matches what was already seen in DPRK Red
-Star desktop OS, using the same ciphers to water mark and DRM / track documents. An event logger
-APK is included which tracks all the user operations on the device. When factory reseting & wiping
-a device, the logger will crash as unique device identifiers are missing. It is not possible to use
-the flashing / recovery img to wipe data on a Pyongyang device unless modified. We enabled some
-features to assist hacking and exploration of the ROM contents.
+An accompanying presentation on device internals and DPRK Android hacking released at DC562 in January
+2019. DPRK & Android surveillance components "Digital signature modification system" are explored in 
+more depth during presentation. The surveillance technology matches similar to that already seen in 
+DPRK Red Star desktop OS, using Android native code to water mark and DRM / track documents. An event 
+logger APK is included which tracks all the user operations on the device. When a user accesses illegal
+or non-state approved media, an alert is generated and stored inside the phone - viewable to the user.
 
+## DPRK jailbreak (전자서명조작체계) bypass
 
-## DPRK Android jailbreak
-
-experimental exploit can be applied to the phone to allow loading of any media & bypass state
-censorship tools. 
+experimental exploit patch can be applied to the phone to allow loading of any media & bypass state
+censorship tool 전자서명조작체계. 
 
 ``` 
 $ adb push libmedianatsign.so /sdcard
@@ -139,9 +136,10 @@ D/gov_sign( 1724): MnsNative isNatSignFile : file name = /storage/sdcard0/Video/
 D/RSG     ( 1724): This file is Nat_Sign_File.
 ```
 
-This is a good example of why governments should not have "Golden Keys", the DPRK Android ROM
-can be abused through its trust model of state access. A user can abuse the functionalities in
-this case to escape the security enforcements.
+This is a good example of why governments should not have "Golden Keys" or encryption backdoors, 
+the DPRK Android ROM can be abused through its trust model of state access. A user can abuse the 
+functionalities in this case to escape DPRK security enforcements, evade logging and watch illegal
+content.
 
 ## 전자서명조작체계 gov_sign exploit (bypass signed media checks) libmedianatsign.so
 
@@ -237,6 +235,10 @@ of the file or offending applications using the file in 전자서명조작체계
 000019a8         pop        {r4, r5, pc}
                         ; endp
 ```
+
+This patch when applied to the OS causes all isNatSignFile checks to return "1", and does not
+perform any or additional verification checks on the file. This causes the OS to treat all opened 
+files as NATISIGN files.
 
 # Acknowledgements
 Hacker Fantastic would like to thank the following people for taking part in the annual winter
