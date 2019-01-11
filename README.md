@@ -147,7 +147,7 @@ this case to escape the security enforcements.
 This is the high level pseudo-code called when isNatSignFile is passed inside Android OS,
 this happens whenever a file is being checked for a valid certificate on opening, accessing,
 reading directories etc. the result this function determines which checks are to be called
-and also performs the verification of certificate to identify NATSIGN and SELFSIGN keyword.
+and also performs the verification of certificate to identify NATISIGN and SELFSIGN keyword.
 
 ```
 int isNatSignFile(int arg0, int arg1, int arg2) {
@@ -197,7 +197,7 @@ The original ARMv7 ASM for this function is below.
 ```
 
 It is possible to hijack this function and subvert the logic, by rewriting this function in ASM it
-will treat all opened files as "NATSIGN" files with successful state authorisation for use, no logging
+will treat all opened files as "NATISIGN" files with successful state authorisation for use, no logging
 will be performed or any further checks on the file. By patching this function we can now use the phone
 to open any media files and documents without "this files is not legal." errors.
 
