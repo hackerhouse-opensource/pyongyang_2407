@@ -251,6 +251,10 @@ eggnog DPRK & North Korean hacking festivities.
 * DefCon562 for hacking fiends - [dc562](https://dc562.org/)
 * slipstream - RSS
 
+# License
+
+These files are available under the 3-clause BSD license.
+
 ![DPRK ROM](https://raw.githubusercontent.com/hackerhouse-opensource/pyongyang_2407/master/booted.png)
 
 *Booted 평양 2407 phone*
